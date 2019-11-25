@@ -1,4 +1,16 @@
 package ua.training;
 
-public class Controller {
+class Controller {
+    private Model model;
+    private View view;
+
+    Controller(Model model, View view) {
+        this.model = model;
+        this.view = view;
+    }
+
+    void processUser() {
+
+    }
+
 }
