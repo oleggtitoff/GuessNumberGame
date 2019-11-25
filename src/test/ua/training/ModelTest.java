@@ -20,13 +20,21 @@ public class ModelTest {
         int value;
 
         for (int i = 0; i < 10000; i++) {
-            value = model.generateRandomIntValueInRange(0, 100);
+            value = model.generateRandomIntValueInRange();
             if (value <= 0 || value >= 100) {
                 isInRange = false;
                 break;
             }
         }
         Assert.assertTrue(isInRange);
+    }
+
+    @Test
+    public void testCheckValueIfIsCorrect() {
+        model.setNewSecretValue();
+        boolean isCorrect = model.checkValue(model.getSecretValue());
+
+        Assert.assertTrue(isCorrect);
     }
 
 }
