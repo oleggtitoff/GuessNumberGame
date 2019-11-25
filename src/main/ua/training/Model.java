@@ -23,8 +23,16 @@ class Model {
         return secretValue;
     }
 
+    int getTopBound() {
+        return topBound;
+    }
+
     boolean checkValue(int value) {
-        return (value == secretValue);
+        if (value == secretValue) {
+            return true;
+        }
+        topBound = value;
+        return false;
     }
 
     /**

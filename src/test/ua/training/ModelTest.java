@@ -44,4 +44,11 @@ public class ModelTest {
         Assert.assertFalse(isCorrect);
     }
 
+    @Test
+    public void testCheckValueIfIsHigherMustChangeTopBound() {
+        model.checkValue(model.getSecretValue() + 1);
+
+        Assert.assertEquals(model.getSecretValue() + 1, model.getTopBound());
+    }
+
 }
