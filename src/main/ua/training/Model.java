@@ -24,7 +24,7 @@ class Model {
     }
 
     boolean checkValue(int value) {
-        return true;
+        return (value == secretValue);
     }
 
     /**

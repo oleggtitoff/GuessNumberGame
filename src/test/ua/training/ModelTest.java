@@ -11,6 +11,7 @@ public class ModelTest {
     @Before
     public void initTestObject() {
         model = new Model();
+        model.setNewSecretValue();
     }
 
     @Ignore
@@ -30,11 +31,17 @@ public class ModelTest {
     }
 
     @Test
-    public void testCheckValueIfIsCorrect() {
-        model.setNewSecretValue();
+    public void testCheckValueIfIsCorrectMustReturnTrue() {
         boolean isCorrect = model.checkValue(model.getSecretValue());
 
         Assert.assertTrue(isCorrect);
+    }
+
+    @Test
+    public void testCheckValueIfIsHigherMustReturnFalse() {
+        boolean isCorrect = model.checkValue(model.getSecretValue() + 1);
+
+        Assert.assertFalse(isCorrect);
     }
 
 }
