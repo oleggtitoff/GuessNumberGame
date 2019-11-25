@@ -38,10 +38,11 @@ public class ModelTest {
     }
 
     @Test
-    public void testCheckValueIfIsHigherMustReturnFalse() {
-        boolean isCorrect = model.checkValue(model.getSecretValue() + 1);
+    public void testCheckValueIfIsNotCorrectMustReturnFalse() {
+        boolean higherIsCorrect = model.checkValue(model.getSecretValue() + 1);
+        boolean lowerIsCorrect = model.checkValue(model.getSecretValue() - 1);
 
-        Assert.assertFalse(isCorrect);
+        Assert.assertFalse(higherIsCorrect || lowerIsCorrect);
     }
 
     @Test
