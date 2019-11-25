@@ -23,6 +23,10 @@ class Model {
         return secretValue;
     }
 
+    int getLowBound() {
+        return lowBound;
+    }
+
     int getTopBound() {
         return topBound;
     }
@@ -30,8 +34,11 @@ class Model {
     boolean checkValue(int value) {
         if (value == secretValue) {
             return true;
+        } else if (value < secretValue) {
+            lowBound = value;
+        } else {
+            topBound = value;
         }
-        topBound = value;
         return false;
     }
 

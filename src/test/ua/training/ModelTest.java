@@ -52,4 +52,11 @@ public class ModelTest {
         Assert.assertEquals(model.getSecretValue() + 1, model.getTopBound());
     }
 
+    @Test
+    public void testCheckValueIfIsLowerMustChangeLowBound() {
+        model.checkValue(model.getSecretValue() - 1);
+
+        Assert.assertEquals(model.getSecretValue() - 1, model.getLowBound());
+    }
+
 }
