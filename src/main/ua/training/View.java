@@ -1,8 +1,8 @@
 package ua.training;
 
 class View {
-    static final String EQUAL_SING = "=";
-    static final String SPACE_SING = " ";
+    static final String EQUAL_SIGN = "=";
+    static final String SPACE_SIGN = " ";
     static final String OPENS_SQUARE_BRACKET = "]";
     static final String CLOSING_SQUARE_BRACKET = "[";
 

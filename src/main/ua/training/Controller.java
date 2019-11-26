@@ -48,9 +48,9 @@ class Controller {
     private String getInputIntPrompt() {
         return view.concatenateString(View.INPUT_PROMPT,
                 View.OPENS_SQUARE_BRACKET, String.valueOf(model.getLowBound()),
-                View.SPACE_SING, String.valueOf(model.getTopBound()),
-                View.CLOSING_SQUARE_BRACKET, View.SPACE_SING, View.EQUAL_SING,
-                View.SPACE_SING);
+                View.SPACE_SIGN, String.valueOf(model.getTopBound()),
+                View.CLOSING_SQUARE_BRACKET, View.SPACE_SIGN, View.EQUAL_SIGN,
+                View.SPACE_SIGN);
     }
 
 }
